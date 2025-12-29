@@ -201,7 +201,7 @@
         </div>
 
         <div class="actions">
-            <a href="#" class="btn" onclick="window.print(); return false;">Print / Save as PDF</a>
+            <a href="#" class="btn" id="printBtn">Print / Save as PDF</a>
             <a href="index.html" class="btn btn-secondary">Back to Resume</a>
         </div>
     </div>
@@ -212,6 +212,12 @@
         const today = new Date();
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         dateElement.textContent = today.toLocaleDateString('en-US', options);
+
+        // Print functionality
+        document.getElementById('printBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.print();
+        });
     </script>
 </body>
 </html>

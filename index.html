@@ -97,6 +97,18 @@
             color: #764ba2;
         }
 
+        .btn.disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        .btn.disabled:hover {
+            background: #ccc;
+            transform: none;
+            box-shadow: none;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2em;
@@ -115,7 +127,7 @@
         
         <div class="links">
             <a href="cover-letter.html" class="btn">📄 View Cover Letter</a>
-            <a href="#" class="btn btn-secondary" onclick="alert('Resume/CV coming soon!'); return false;">📋 View Resume/CV</a>
+            <a href="#" class="btn btn-secondary disabled" id="resumeBtn">📋 View Resume/CV (Coming Soon)</a>
         </div>
 
         <div class="social-links">
@@ -123,5 +135,12 @@
             <a href="mailto:contact@umercode.me">Email</a>
         </div>
     </div>
+
+    <script>
+        // Prevent navigation for disabled button
+        document.getElementById('resumeBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+        });
+    </script>
 </body>
 </html>
