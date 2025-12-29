@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cover Letter - Umer Khan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .header h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .contact-info a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .date {
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        .letter-content {
+            margin-bottom: 40px;
+        }
+
+        .letter-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .greeting {
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .signature {
+            margin-top: 40px;
+        }
+
+        .signature p {
+            margin-bottom: 5px;
+        }
+
+        .actions {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            margin: 0 10px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background: #5568d3;
+        }
+
+        .btn-secondary {
+            background: #764ba2;
+        }
+
+        .btn-secondary:hover {
+            background: #653a8a;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 40px;
+            }
+
+            .actions {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .btn {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Umer Khan</h1>
+            <div class="contact-info">
+                <p>
+                    Email: <a href="mailto:contact@umercode.me">contact@umercode.me</a> | 
+                    Website: <a href="https://umercode.me">umercode.me</a> | 
+                    GitHub: <a href="https://github.com/umerkhan-12">github.com/umerkhan-12</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="date">
+            <p id="current-date"></p>
+        </div>
+
+        <div class="letter-content">
+            <p class="greeting">Dear Hiring Manager,</p>
+
+            <p>
+                I am writing to express my strong interest in joining your organization. As a dedicated and passionate software developer with a proven track record of delivering high-quality solutions, I am excited about the opportunity to contribute to your team's success.
+            </p>
+
+            <p>
+                Throughout my career, I have developed strong expertise in modern web technologies and software development practices. My technical skills, combined with my ability to solve complex problems and work collaboratively, make me well-suited for challenging development roles. I pride myself on writing clean, maintainable code and staying current with the latest industry trends and best practices.
+            </p>
+
+            <p>
+                What sets me apart is my commitment to continuous learning and improvement. I actively contribute to open-source projects, maintain my technical portfolio at umercode.me, and regularly engage with the developer community through GitHub. This dedication to growth has enabled me to quickly adapt to new technologies and frameworks, ensuring I can make immediate contributions to any development team.
+            </p>
+
+            <p>
+                I am particularly drawn to opportunities that challenge me to grow as a developer while allowing me to make meaningful contributions to innovative projects. I thrive in collaborative environments where I can both learn from experienced team members and share my own knowledge and insights.
+            </p>
+
+            <p>
+                Beyond my technical capabilities, I bring strong communication skills, attention to detail, and a results-oriented mindset. I understand that successful software development requires not just coding ability, but also clear communication with stakeholders, thorough documentation, and a focus on delivering value to end users.
+            </p>
+
+            <p>
+                I would welcome the opportunity to discuss how my skills and experience align with your team's needs. I am confident that my technical expertise, passion for development, and commitment to excellence would make me a valuable addition to your organization.
+            </p>
+
+            <p>
+                Thank you for considering my application. I look forward to the possibility of contributing to your team and am available for an interview at your earliest convenience.
+            </p>
+
+            <div class="signature">
+                <p>Sincerely,</p>
+                <p><strong>Umer Khan</strong></p>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a href="#" class="btn" onclick="window.print(); return false;">Print / Save as PDF</a>
+            <a href="index.html" class="btn btn-secondary">Back to Resume</a>
+        </div>
+    </div>
+
+    <script>
+        // Set current date
+        const dateElement = document.getElementById('current-date');
+        const today = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        dateElement.textContent = today.toLocaleDateString('en-US', options);
+    </script>
+</body>
+</html>
